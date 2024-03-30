@@ -747,6 +747,12 @@ namespace Frida.Gadget {
 				config_path = config_path + ".config.so";
 			}
 		}
+
+		if (!FileUtils.test (config_path, FileTest.EXISTS)) {
+			config_path = "/sdcard/libfrida-gadget.config.so";
+		}
+
+
 #endif
 
 		string config_data;
